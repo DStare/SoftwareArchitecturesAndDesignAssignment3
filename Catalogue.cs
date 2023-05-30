@@ -52,14 +52,14 @@ namespace assignment3
 
         public void showGUI() {
 
-            Categorise();
+            //Categorise();
             string userInput;
             while (true)
             {
-                foreach (Items p in catalogueList){
+                /*foreach (Items p in catalogueList){
                 Console.WriteLine( String.Format( "Product ID={0} Product Name={1} Price={2}", p.productID, p.productName, p.Price));
                 //
-            }
+            }*/
                 Console.WriteLine("****************");
                 Console.WriteLine("\tCatalogue\t");
                 Console.WriteLine("****************");
