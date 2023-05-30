@@ -13,3 +13,19 @@ C:\Users\David\Desktop\uni work\sem2 2022\extra\assignment3\assignment3\obj\Debu
 C:\Users\David\Desktop\uni work\sem2 2022\extra\assignment3\assignment3\obj\Debug\net6.0\assignment3.pdb
 C:\Users\David\Desktop\uni work\sem2 2022\extra\assignment3\assignment3\obj\Debug\net6.0\assignment3.genruntimeconfig.cache
 C:\Users\David\Desktop\uni work\sem2 2022\extra\assignment3\assignment3\obj\Debug\net6.0\ref\assignment3.dll
+C:\Users\HTRAN\Documents\GitHub\SoftwareArchitecturesAndDesignAssignment3\obj\Debug\net6.0\assignment3.csproj.AssemblyReference.cache
+C:\Users\HTRAN\Documents\GitHub\SoftwareArchitecturesAndDesignAssignment3\obj\Debug\net6.0\assignment3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HTRAN\Documents\GitHub\SoftwareArchitecturesAndDesignAssignment3\obj\Debug\net6.0\assignment3.AssemblyInfoInputs.cache
+C:\Users\HTRAN\Documents\GitHub\SoftwareArchitecturesAndDesignAssignment3\obj\Debug\net6.0\assignment3.AssemblyInfo.cs
+C:\Users\HTRAN\Documents\GitHub\SoftwareArchitecturesAndDesignAssignment3\obj\Debug\net6.0\assignment3.csproj.CoreCompileInputs.cache
+C:\Users\HTRAN\Documents\GitHub\SoftwareArchitecturesAndDesignAssignment3\obj\Debug\net6.0\assignment3.sourcelink.json
+C:\Users\HTRAN\Documents\GitHub\SoftwareArchitecturesAndDesignAssignment3\obj\Debug\net6.0\assignment3.dll
+C:\Users\HTRAN\Documents\GitHub\SoftwareArchitecturesAndDesignAssignment3\obj\Debug\net6.0\refint\assignment3.dll
+C:\Users\HTRAN\Documents\GitHub\SoftwareArchitecturesAndDesignAssignment3\obj\Debug\net6.0\assignment3.pdb
+C:\Users\HTRAN\Documents\GitHub\SoftwareArchitecturesAndDesignAssignment3\bin\Debug\net6.0\assignment3.exe
+C:\Users\HTRAN\Documents\GitHub\SoftwareArchitecturesAndDesignAssignment3\bin\Debug\net6.0\assignment3.deps.json
+C:\Users\HTRAN\Documents\GitHub\SoftwareArchitecturesAndDesignAssignment3\bin\Debug\net6.0\assignment3.runtimeconfig.json
+C:\Users\HTRAN\Documents\GitHub\SoftwareArchitecturesAndDesignAssignment3\bin\Debug\net6.0\assignment3.dll
+C:\Users\HTRAN\Documents\GitHub\SoftwareArchitecturesAndDesignAssignment3\bin\Debug\net6.0\assignment3.pdb
+C:\Users\HTRAN\Documents\GitHub\SoftwareArchitecturesAndDesignAssignment3\obj\Debug\net6.0\assignment3.genruntimeconfig.cache
+C:\Users\HTRAN\Documents\GitHub\SoftwareArchitecturesAndDesignAssignment3\obj\Debug\net6.0\ref\assignment3.dll

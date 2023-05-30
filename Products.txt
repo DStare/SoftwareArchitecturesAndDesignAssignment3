@@ -1,0 +1,15 @@
+1
+Banana
+3
+
+2
+Pear
+4
+
+3
+Carrot
+1
+
+4
+Apple
+2
