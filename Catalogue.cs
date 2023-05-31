@@ -11,6 +11,7 @@ namespace assignment3
         public Catalogue() { }
         String filePath = "Products.txt";
         List<Items> catalogueList = new List<Items>();
+        List<Items> ShoppingCartList = new List<Items>();
 
         public struct Items{
             public int productID;
@@ -52,14 +53,25 @@ namespace assignment3
 
         public void showGUI() {
 
-            //Categorise();
+            Categorise();
             string userInput;
+            string input;
             while (true)
             {
-                /*foreach (Items p in catalogueList){
+                foreach (Items p in catalogueList){
                 Console.WriteLine( String.Format( "Product ID={0} Product Name={1} Price={2}", p.productID, p.productName, p.Price));
-                //
-            }*/
+                
+            }
+            input = Console.ReadLine();
+                if (input == "1"){
+                foreach(Items c in catalogueList){
+                        if (c.productID== 1){
+                            ShoppingCartList.Add(c);
+                            Console.WriteLine("Test1");
+                        }
+                    
+                }
+                }
                 Console.WriteLine("****************");
                 Console.WriteLine("\tCatalogue\t");
                 Console.WriteLine("****************");
