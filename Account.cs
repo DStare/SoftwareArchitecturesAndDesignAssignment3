@@ -152,14 +152,23 @@ namespace assignment3
 
                         customer = new Customer(newUserName, newPassword);
 
-
-
-
                 }
 
-      
+
+        public string getCustomerUsername() {
+            if (customer == null)
+            {
+                return "";
+            }
+            else {
+                return customer.getUsername();
+            }
 
         }
+
+      
+        
+    }
 
 
     }

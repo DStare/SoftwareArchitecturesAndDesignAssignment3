@@ -101,7 +101,7 @@ namespace assignment3
                         // the end of the file is reached. 
                         while ((line = textFile.ReadLine()) != null)
                         {
-                            transactionDetails = line.Split('/');
+                            transactionDetails = line.Split(',');
                              if (transactionDetails[1] == username)
                              {
                                 Console.WriteLine(transactionDetails[0]);                   
@@ -169,6 +169,10 @@ namespace assignment3
 
         }
 
+
+        public string getUsername() { 
+            return username;    
+        }
     }
 
 }

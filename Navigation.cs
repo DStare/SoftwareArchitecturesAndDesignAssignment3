@@ -57,6 +57,7 @@ namespace assignment3
                         case "3":
                             Console.WriteLine("You have chosen Checkout\n");
                             checkout.showGUI();
+                            //pass in the shopping cart list.
                             break;
                         case "4":
                             Console.WriteLine("You have chosen ShoppingCart\n");

@@ -56,8 +56,9 @@ namespace assignment3
             }
         }
 
-        public override void processPayment() { 
-        
+        public override void processPayment(float totalPrice) {
+
+            Console.WriteLine("Requesting payment from bank via credit card for total of: " + totalPrice);
         }
         public override void verifyPayment() {
 

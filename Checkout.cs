@@ -11,11 +11,16 @@ namespace assignment3
     {
         BankTransfer bankTransfer;
         Creditcard creditcard;
+        Account currentAccount;
         bool isTransactionComplete;
-        public Checkout() { 
+
+        ShoppingCart cart;
+        public Checkout(ref ShoppingCart shoppingCart, ref Account account) { 
             bankTransfer = new BankTransfer();
             creditcard = new Creditcard();
             isTransactionComplete = false;
+            cart = shoppingCart;
+            currentAccount = account;
         }
          public void showGUI() {
 
@@ -43,7 +48,10 @@ namespace assignment3
                             Console.WriteLine("You have chosen credit card\n");
                             creditcard.showGUI();
                             if (creditcard.getIsValidPaymentDetails) {
-                                creditcard.processPayment();
+
+                                creditcard.processPayment(cart.getTotalPrice());
+                                Console.WriteLine("Please enter your address information: \n");
+                                userInput = Console.ReadLine();
                                 isTransactionComplete=true;
                             }
                             break;
@@ -52,8 +60,10 @@ namespace assignment3
                             bankTransfer.showGUI();
                             if (bankTransfer.getIsValidPaymentDetails)
                             {
-                                bankTransfer.processPayment();
-                                isTransactionComplete=true;
+                                bankTransfer.processPayment(cart.getTotalPrice());
+                                Console.WriteLine("Please enter your address information: \n");
+                                userInput = Console.ReadLine();
+                                isTransactionComplete =true;
                             }
                             break;
                         case "5":
@@ -61,10 +71,71 @@ namespace assignment3
                         default:
                             Console.WriteLine("Invalid option, try again\n");
                             break;
+                    }
+                }
 
+                if (isTransactionComplete) {
+
+                    int currentTransactionId = 0;
+                    try
+                    {
+                        string line;
+                        string[] transactionDetails;
+                        using (StreamReader textFile = new StreamReader("../../../tables/Transactions.txt"))
+                        {
+                            line = textFile.ReadLine();
+                            while ((line = textFile.ReadLine()) != null)
+                            {
+                                transactionDetails = line.Split(',');
+                                currentTransactionId = Int32.Parse(transactionDetails[0]);
+                            }
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        // Let the user know what went wrong.
+                        Console.WriteLine("The file could not be read: ");
+                        Console.WriteLine(e.Message);
                     }
 
+                    currentTransactionId++;
+                    try
+                    {
+                        List<selectedProducts> purchasedProducts = cart.getShoppingCartProductsList();
+                        using (StreamWriter textFile = File.AppendText(    "../../../tables/Transactions.txt"))
+                        {
+                            string productIDs = "";
+                            string quantities = "";
+                            for (int i = 0; i < purchasedProducts.Count;i++) {
+                                productIDs += purchasedProducts[i].id.ToString();
+                                if (i < purchasedProducts.Count - 1) {
+                                    productIDs += "/";
+                                }
+                            }
 
+                            for (int i = 0; i < purchasedProducts.Count; i++) {
+                                quantities += purchasedProducts[i].quantity.ToString();
+                                if (i < purchasedProducts.Count - 1)
+                                {
+                                    quantities += "/";
+                                }
+                            }
+
+                            textFile.WriteLine(
+                                    currentTransactionId.ToString() + "," +
+                                    currentAccount.getCustomerUsername() + "," +
+                                    productIDs + "," +
+                                    quantities + "," +
+                                    cart.getTotalPrice().ToString()
+                                    );
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        // Let the user know what went wrong.
+                        Console.WriteLine("The file could not be written to:");
+                        Console.WriteLine(e.Message);
+                    }
                 }
 
                 if (userInput == "5" || isTransactionComplete)

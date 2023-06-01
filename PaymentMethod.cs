@@ -9,7 +9,7 @@ namespace assignment3
     internal abstract class PaymentMethod
     {
         public abstract void showGUI();
-        public abstract void processPayment();
+        public abstract void processPayment(float totalPrice);
         public abstract void verifyPayment();
         public abstract void recordTransaction();
 
