@@ -134,11 +134,11 @@ namespace assignment3
                             // the end of the file is reached. 
                             while ((line = textFile.ReadLine()) != null)
                             {
-                                transactionDetails = line.Split('/');
+                                transactionDetails = line.Split(',');
                                 if (transactionDetails[0] == userInput)
                                 {
-                                    string[] products = transactionDetails[2].Split(",");
-                                    string[] quantities = transactionDetails[3].Split(",");
+                                    string[] products = transactionDetails[2].Split("/");
+                                    string[] quantities = transactionDetails[3].Split("/");
 
                                     Console.WriteLine("\n\nProducts:");
                                     for (int i = 0; i < products.Length; i++) {

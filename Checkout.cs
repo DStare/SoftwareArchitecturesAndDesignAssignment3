@@ -9,7 +9,14 @@ namespace assignment3
     
     internal class Checkout 
     {
-        public Checkout() { }
+        BankTransfer bankTransfer;
+        Creditcard creditcard;
+        bool isTransactionComplete;
+        public Checkout() { 
+            bankTransfer = new BankTransfer();
+            creditcard = new Creditcard();
+            isTransactionComplete = false;
+        }
          public void showGUI() {
 
             string userInput;
@@ -34,11 +41,20 @@ namespace assignment3
                     {
                         case "1":
                             Console.WriteLine("You have chosen credit card\n");
-                            
+                            creditcard.showGUI();
+                            if (creditcard.getIsValidPaymentDetails) {
+                                creditcard.processPayment();
+                                isTransactionComplete=true;
+                            }
                             break;
                         case "2":
                             Console.WriteLine("You have chosen bank account\n");
-                            
+                            bankTransfer.showGUI();
+                            if (bankTransfer.getIsValidPaymentDetails)
+                            {
+                                bankTransfer.processPayment();
+                                isTransactionComplete=true;
+                            }
                             break;
                         case "5":
                             Console.WriteLine("You have chosen to return to navigation\n"); break;
@@ -51,7 +67,7 @@ namespace assignment3
 
                 }
 
-                if (userInput == "5" || userInput == "1" || userInput == "2")
+                if (userInput == "5" || isTransactionComplete)
                 {
                     Console.WriteLine("returning to navigation\n");
                     break;
