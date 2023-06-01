@@ -8,7 +8,47 @@ namespace assignment3
 {
     internal class ShoppingCart
     {
-        public ShoppingCart() { }
+
+        private List<Products> _shoppingCart;
+
+        public ShoppingCart() {
+            _shoppingCart = new List<Products>();
+         }
+
+        public List<Products> ShoppingCartList{
+            get {
+                return _shoppingCart;
+            }
+        }
+
+        public void AddSelection(Products p){
+            _shoppingCart.Add(p);
+        }
+
+        public void RemoveSelection(Products p){
+            _shoppingCart.Remove(p);
+        }
+
+        public int ShoppingCartCount{
+            get{
+                return _shoppingCart.Count;
+            }
+        }
+
+        public Products this[int i]{
+            get{
+                return _shoppingCart[i];
+            }
+        }
+
+        public double CalculateTotal(ShoppingCart sc, Account a){
+            double total = 0;
+            for (int i = 0; i< sc.ShoppingCartCount; i++){
+                total += sc[i].Price;
+            }
+            return total;
+        }
+
 
         public void showGUI()
         {
