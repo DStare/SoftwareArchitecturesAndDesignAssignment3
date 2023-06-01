@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace assignment3
 {
-    internal class Catalogue
+   
+internal class Catalogue
     {
-        public Catalogue() { }
+        
+        public Catalogue() { 
+    }
 
         public void showGUI() {
             string userInput;
@@ -32,6 +35,7 @@ namespace assignment3
                     userInputToNum = Int32.Parse(userInput);
 
                     Console.WriteLine("checking for item");
+
 
                 }
 

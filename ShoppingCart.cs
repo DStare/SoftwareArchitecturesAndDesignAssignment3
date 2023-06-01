@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace assignment3
 {
+    
     internal class ShoppingCart
     {
         public ShoppingCart() { }

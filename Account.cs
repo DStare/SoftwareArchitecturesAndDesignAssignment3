@@ -57,7 +57,7 @@ namespace assignment3
                                 break;
                             case "2":
                                 Console.WriteLine("You have chosen to create a new account\n");
-                                //this.createAccount();
+                                this.createAccount();
                                 break;
                             case "5":
                                 Console.WriteLine("You have chosen to return to navigation\n"); break;
@@ -112,5 +112,59 @@ namespace assignment3
 
         }
 
+        private void createAccount()
+        {
+            string userInput, newUserName, newPassword;
+               
+                        Console.WriteLine("****************");
+                        Console.WriteLine("\tCreating an Account\t");
+                        Console.WriteLine("****************");
+                        Console.WriteLine("\n\n\n");
+                        Console.WriteLine(
+                            "enter username or press \"5\" to exit: \n"
+                            );
+
+                        userInput = Console.ReadLine();                    
+
+                        if (userInput == "5")
+                        {
+                            Console.WriteLine("returning to Account\n");
+                return;
+                        }
+
+                        newUserName = userInput;
+
+                        Console.WriteLine(
+                            "enter password or press \"5\" to exit: \n"
+                            );
+
+                        userInput = Console.ReadLine();
+
+                        if (userInput == "5")
+                        {
+                            Console.WriteLine("returning to Account\n");
+                return;
+                        }
+
+                        newPassword = userInput;
+
+                        //read into file newUserName and newPassword
+
+                        customer = new Customer(newUserName, newPassword);
+
+
+
+
+                }
+
+      
+
+        }
+
+
     }
-}
+
+
+
+    
+
