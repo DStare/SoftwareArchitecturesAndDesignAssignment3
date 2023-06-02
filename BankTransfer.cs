@@ -71,10 +71,7 @@ namespace assignment3
             isValidBankTransferDetails = true;
 
         }
-        public override void recordTransaction() { 
-        
-        }
-
+      
         public override bool getIsValidPaymentDetails
         {
             get

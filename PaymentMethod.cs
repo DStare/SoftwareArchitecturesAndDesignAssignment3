@@ -11,7 +11,6 @@ namespace assignment3
         public abstract void showGUI();
         public abstract void processPayment(float totalPrice);
         public abstract void verifyPayment();
-        public abstract void recordTransaction();
 
         public abstract bool getIsValidPaymentDetails { get; }
 

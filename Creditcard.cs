@@ -67,10 +67,7 @@ namespace assignment3
             isValidCreditCardDetails = true;
         
         }
-        public override void recordTransaction() { 
-        
-        }
-
+       
         public override bool getIsValidPaymentDetails {
             get {
                 return isValidCreditCardDetails;
