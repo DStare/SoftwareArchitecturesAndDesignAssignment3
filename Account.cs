@@ -148,9 +148,21 @@ namespace assignment3
 
                         newPassword = userInput;
 
-                        //read into file newUserName and newPassword
+            try
+            {
+                using (StreamWriter textFile = File.AppendText("../../../tables/Accounts.txt"))
+                {                    
+                    textFile.WriteLine("\n" +newUserName + "," + newPassword);
+                }
+            }
+            catch (Exception e)
+            {
+                // Let the user know what went wrong.
+                Console.WriteLine("The file could not be written to:");
+                Console.WriteLine(e.Message);
+            }
 
-                        customer = new Customer(newUserName, newPassword);
+            customer = new Customer(newUserName, newPassword);
 
                 }
 
@@ -205,7 +217,10 @@ namespace assignment3
 
 
         }
+     
         
+
+
     }
 
 
