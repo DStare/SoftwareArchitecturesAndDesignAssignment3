@@ -4,8 +4,6 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
-
         Account account = new Account();
         ShoppingCart shoppingCart = new ShoppingCart();
         Checkout checkout = new Checkout(ref shoppingCart, ref account);
