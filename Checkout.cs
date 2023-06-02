@@ -128,6 +128,14 @@ namespace assignment3
                                     quantities + "," +
                                     cart.getTotalPrice().ToString()
                                     );
+
+                            Console.WriteLine("Your receipt is this: \n" +
+                                "current transaction ID: " + currentTransactionId.ToString() + "\n" +
+                                "Customer Username: " +    currentAccount.getCustomerUsername() + "\n" +
+                                "products bought: " +   productIDs + "\n" +
+                                "quantities bought: " +   quantities + "\n" +
+                                "total price: " +   cart.getTotalPrice().ToString()
+                                );
                         }
                     }
                     catch (Exception e)

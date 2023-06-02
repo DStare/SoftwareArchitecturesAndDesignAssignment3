@@ -8,3 +8,4 @@ TransactionID,AccountUserName,ProductList,QuantityList,TotalPrice
 7,,3/5,46/5,9211.75
 7,A,4/5/2,34/33/65,59825.598
 8,B,5/3/6/7,44/44/6/6,79943.5
+9,,2/5,44/22,39772.7
