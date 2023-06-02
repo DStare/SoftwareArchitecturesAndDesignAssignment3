@@ -52,7 +52,7 @@ namespace assignment3
                             break;
                         case "2":
                             Console.WriteLine("You have chosen Catalogue\n");
-                            catalogue.showGUI();
+                           // catalogue.showGUI();
                             break;
                         case "3":
                             Console.WriteLine("You have chosen Checkout\n");

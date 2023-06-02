@@ -9,6 +9,12 @@ namespace assignment3
     
     internal class Checkout 
     {
+
+
+
+
+
+        
         public Checkout() { }
          public void showGUI() {
 
