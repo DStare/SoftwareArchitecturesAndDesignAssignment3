@@ -91,8 +91,8 @@ namespace assignment3
                 Console.WriteLine("Enter password: ");
                 passEnter = Console.ReadLine();
 
-                //check for valid password
-                isValidCredentials = true;
+                
+                isValidCredentials = validateLoginCredentials(userEnter,passEnter);
                 if (isValidCredentials)
                 {
                     customer = new Customer(userEnter, passEnter);
@@ -166,7 +166,45 @@ namespace assignment3
 
         }
 
-      
+
+        public bool validateLoginCredentials(string username, string password) {
+            bool isValidated = false;
+
+            try
+            {
+                using (StreamReader textFile = new StreamReader("../../../tables/Accounts.txt"))
+                {
+                    string line;
+                    string[] AccountDetails;
+
+                    // Read and display lines from the file until 
+                    // the end of the file is reached. 
+                    line = textFile.ReadLine();
+                    while ((line = textFile.ReadLine()) != null)
+                    {
+                        AccountDetails = line.Split(',');
+                        if (AccountDetails[0] == username)
+                        {
+                            if (AccountDetails[1] == password) {
+                                isValidated = true;
+                            }
+
+                        }
+
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                // Let the user know what went wrong.
+                Console.WriteLine("The file could not be read:");
+                Console.WriteLine(e.Message);
+            }
+            return isValidated;
+
+
+
+        }
         
     }
 
